@@ -1,0 +1,47 @@
+@use "../../../../SASS/variables" as *;
+@use "../../../../SASS/Mixins" as *;
+
+.testimonail {
+  min-width: 100%;
+  .opinion {
+    color: #fff;
+    line-height: 1.9;
+    font-size: 15px;
+  }
+  .client-data {
+    @include flex(row, flex-start, center);
+    margin-top: 15px;
+    .client-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+    .client-rate {
+      @include flex(column, flex-start, flex-start);
+      gap: 4px;
+      .stars {
+        .star {
+          font-size: 12px;
+          margin-right: 7px;
+        }
+      }
+      .client-name,
+      .guest-word {
+        color: #fff;
+      }
+      .client-name {
+        text-transform: uppercase;
+        font-size: 16px;
+        letter-spacing: 3px;
+        font-family: $hotel-name-family;
+      }
+      .guest-word {
+        font-size: 13px;
+        font-family: $hotel-name-family;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

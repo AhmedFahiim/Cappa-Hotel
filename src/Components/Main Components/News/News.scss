@@ -1,0 +1,57 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/Components" as *;
+
+.news {
+  padding: 120px 0;
+  background-color: $sec-color;
+  .news-section-head {
+    .small-head {
+      color: $main-color;
+      font-size: 16px;
+    }
+    .main-head {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 300;
+      margin: 10px 0 25px;
+    }
+  }
+  .swiper {
+    padding-bottom: 65px;
+  }
+  .news-slider-main-holder {
+    position: relative;
+    .arrow {
+      @include flex(row, center, center);
+      position: absolute;
+      z-index: 2 !important;
+      top: calc(50% - 65px);
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      font-size: 14px;
+      color: #fff;
+      cursor: pointer;
+      transition: $transition;
+      .arrowIcon {
+        font-size: 22px;
+      }
+      &.right {
+        right: 25px;
+      }
+      &.left {
+        left: 25px;
+      }
+      &:hover {
+        transform: scale(0.9) translateY(-50%);
+        border-color: $main-color;
+      }
+    }
+    .news-slider-items-holder {
+      @include flex(row, flex-start, center);
+    }
+  }
+}

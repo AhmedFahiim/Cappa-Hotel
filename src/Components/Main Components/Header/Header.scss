@@ -1,0 +1,103 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  padding: 20px 0;
+  transition: $transition + 0.5;
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .container {
+    @include flex(row, space-between, center);
+  }
+  .logo {
+    flex-basis: 15%;
+  }
+  .links-holder {
+    flex: 1;
+  }
+  .links {
+    @include flex(row, flex-end, center);
+    .link-item {
+      margin-right: 30px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      font-family: $hotel-name-family;
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        transition: $transition;
+        &.active,
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    &.fixed {
+      .link-item {
+        a {
+          color: $sec-color;
+          text-transform: uppercase;
+          transition: $transition;
+          &.active,
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  .bars {
+    position: relative;
+    top: -4px;
+    color: $main-color;
+    font-size: 35px;
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// start media queries
+@include media(MobileToLarge) {
+  header {
+    .logo {
+      flex-basis: 50%;
+    }
+    .bars {
+      display: block;
+    }
+    .links {
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      top: 110%;
+      left: 0;
+      background-color: #fff;
+      text-align: center;
+      height: 0;
+      overflow: hidden;
+      transition: $transition;
+      .link-item {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 2px solid #ededed;
+        margin: 0;
+        a {
+          color: $sec-color;
+        }
+      }
+      &.active {
+        height: 310px;
+        padding: 10px 0;
+      }
+    }
+  }
+}
+// end media queries

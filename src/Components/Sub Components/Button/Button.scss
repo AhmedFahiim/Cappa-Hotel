@@ -1,0 +1,28 @@
+@use "../../../SASS/Variables" as *;
+
+button {
+  position: relative;
+  padding: 12px 25px;
+  transition: $transition;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform $transition;
+  }
+  &:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  a {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    transition: $transition;
+  }
+}

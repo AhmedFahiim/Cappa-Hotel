@@ -1,0 +1,30 @@
+@use "../../../../SASS/variables" as *;
+@use "../../../../SASS/Mixins" as *;
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 35px;
+  .item-top {
+    @include flex(row, space-between, center);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed $main-color;
+    .item-name {
+      color: $main-color;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .item-price {
+      color: #fff;
+      font-size: larger;
+    }
+  }
+  .item-bottom {
+    .made-of {
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+  }
+}

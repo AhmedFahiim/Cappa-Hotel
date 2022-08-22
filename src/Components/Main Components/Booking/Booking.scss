@@ -1,0 +1,129 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/Components" as *;
+
+.booking {
+  .row {
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px 0;
+  }
+  .booking-content {
+    padding: 50px 30px 0;
+    .stars {
+      .star {
+        margin-right: 3px;
+      }
+    }
+    .notes {
+      color: #fff;
+      font-size: 23px;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+    .call-us {
+      margin-bottom: 20px;
+      .icon {
+        border: none;
+      }
+      .number {
+        a {
+          color: #fff;
+          font-weight: 900;
+        }
+      }
+    }
+    .call-free {
+      position: relative;
+      left: 25px;
+      font-size: 16px;
+      color: #fff;
+      font-family: $hotel-name-family;
+      letter-spacing: 2px;
+      .checked-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -25px;
+      }
+    }
+  }
+  .booking-form {
+    position: relative;
+    top: 100px;
+    right: 30px;
+    .content-holder {
+      background-color: $pale-red;
+      padding: 40px 50px;
+      .form-head {
+        padding-bottom: 10px;
+        border-bottom: 1px solid $thin-border;
+        .small-head {
+          font-size: 14px;
+          color: $text-color;
+        }
+        .main-head {
+          font-size: 27px;
+          color: $sec-color;
+          margin-top: 10px;
+          font-weight: normal;
+          letter-spacing: 2px;
+        }
+      }
+      form {
+        padding-top: 15px;
+        .row {
+          justify-content: space-between;
+          & > div {
+            position: relative;
+            margin-bottom: 15px;
+            background-color: #fff;
+            padding: 15px 20px;
+            cursor: pointer;
+            .box-head {
+              font-size: 17px;
+              color: $text-color;
+              font-family: $hotel-name-family;
+              letter-spacing: 1px;
+            }
+            .icon {
+              position: absolute;
+              top: 50%;
+              right: 20px;
+              transform: translateY(-50%);
+              color: $main-color;
+              font-size: 17px;
+            }
+          }
+          .half {
+            flex-basis: 48%;
+          }
+          .main-button {
+            background-color: $main-color;
+            font-size: 17px;
+            &::after {
+              background-color: $sec-color;
+            }
+            a {
+              letter-spacing: 2px;
+              font-family: $hotel-name-family;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// start media queries
+@include media(MobileToXLarge) {
+  .booking {
+    padding: 60px 0;
+    height: auto;
+    .booking-form {
+      top: 0;
+      right: 0;
+    }
+  }
+}
+// end media queries

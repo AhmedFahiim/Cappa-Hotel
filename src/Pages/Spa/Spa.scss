@@ -1,0 +1,23 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+.spa {
+  .spa-info {
+    padding-top: 120px;
+  }
+  .call-us {
+    .icon {
+      .phone-icon {
+        color: $main-color;
+      }
+    }
+    .number {
+      .type {
+        color: $text-color;
+      }
+    }
+  }
+  .sevices {
+    padding: 120px 0;
+  }
+}

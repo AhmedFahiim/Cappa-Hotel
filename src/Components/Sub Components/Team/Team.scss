@@ -1,0 +1,27 @@
+@use "../../../SASS/Variables" as *;
+.team {
+  padding-top: 120px;
+  background-color: $pale-red;
+  .team-section-head {
+    margin-bottom: 30px;
+    .small {
+      font-size: 16px;
+      font-weight: 500;
+      color: $text-color;
+      font-family: $hotel-name-family;
+      letter-spacing: 5px;
+      margin-bottom: 10px;
+    }
+    .main {
+      font-size: 45px;
+      color: $sec-color;
+      font-weight: 500;
+    }
+  }
+  .swiper {
+    padding-bottom: 120px;
+    .swiper-pagination {
+      bottom: 70px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../../SASS/Components" as *;
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.gallery-item {
+  cursor: pointer;
+  .oevr-lay-holder {
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: $transition + 0.3;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+    .video-icon {
+      @include flex(row, center, center);
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $thin-border;
+      z-index: 10;
+      cursor: pointer;
+      transition: $transition;
+      .play {
+        position: relative;
+        left: 2px;
+        font-size: 25px;
+        color: #fff;
+      }
+      &:hover {
+        background-color: #fff;
+        .play {
+          color: $main-color;
+        }
+      }
+    }
+    .over-lay {
+      background-color: transparent;
+    }
+    &:hover {
+      .over-lay {
+        background-color: rgba(#000, 0.3);
+      }
+    }
+  }
+}

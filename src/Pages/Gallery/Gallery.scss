@@ -1,0 +1,14 @@
+@use "../../SASS/Variables" as *;
+
+.gallery {
+  .Gallery-Holder {
+    .special-small-head {
+      color: $text-color;
+      font-weight: 500;
+    }
+    .special-main-head {
+      color: $sec-color;
+      font-size: 45px;
+    }
+  }
+}

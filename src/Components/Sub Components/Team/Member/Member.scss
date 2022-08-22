@@ -1,0 +1,58 @@
+@use "../../../../SASS/Variables" as *;
+@use "../../../../SASS/Mixins" as *;
+
+.member {
+  position: relative;
+  overflow: hidden;
+  .member-img {
+    img {
+      display: block;
+    }
+  }
+  .member-data,
+  .socials {
+    background-color: #fff;
+  }
+  .member-data {
+    padding: 25px 15px;
+    text-align: center;
+    .name {
+      color: $sec-color;
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
+    .title {
+      color: $text-color;
+      font-size: 15px;
+    }
+  }
+  .socials {
+    position: absolute;
+    background-color: #fff;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 25px 15px;
+    text-align: center;
+    transition: $transition;
+    .social-icon {
+      color: $main-color;
+      &:hover {
+        color: $sec-color;
+      }
+    }
+    .mail {
+      display: inline-block;
+      font-size: 15px;
+      color: $text-color;
+      letter-spacing: 3px;
+      text-transform: lowercase;
+      margin-top: 5px;
+    }
+  }
+  &:hover {
+    .socials {
+      top: 79%;
+    }
+  }
+}

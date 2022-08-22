@@ -1,0 +1,85 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.menu {
+  padding: 120px 0;
+  background-color: $sec-color;
+  .LandingHead {
+    text-align: center;
+    .special-small-head {
+      color: $main-color;
+      font-size: 20px;
+    }
+    .special-main-head {
+      font-size: 50px;
+    }
+  }
+  .menu-swiper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    padding: 0 50px;
+    .swiper-slide {
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: $transition;
+      &.active {
+        border-color: $main-color;
+      }
+    }
+    .menu-category {
+      padding: 15px 0;
+      color: #fff;
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    .arrow {
+      @include flex(row, center, center);
+      position: absolute;
+      z-index: 2 !important;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $main-color;
+      font-size: 14px;
+      color: #fff;
+      cursor: pointer;
+      transition: $transition;
+      opacity: 0;
+      .arrowIcon {
+        font-size: 22px;
+      }
+      &.right {
+        right: 0px;
+      }
+      &.left {
+        left: 0px;
+      }
+      &:hover {
+        transform: scale(0.9) translateY(-50%);
+      }
+      @include media(mobile) {
+        display: none;
+      }
+    }
+    &:hover {
+      .arrow {
+        opacity: 1;
+      }
+    }
+    @include media(MobileToLarge) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+  .menu-items {
+    margin-top: 60px;
+    .row {
+      justify-content: space-between;
+    }
+  }
+}

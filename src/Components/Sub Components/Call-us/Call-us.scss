@@ -1,0 +1,41 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.call-us {
+  @include flex(row, flex-start, center);
+
+  .number {
+    text-align: left;
+    .type {
+      display: block;
+      color: #fff;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 2px;
+    }
+    a {
+      color: $main-color;
+      font-size: 18px;
+      letter-spacing: 5px;
+    }
+  }
+  .icon {
+    @include flex(row, center, center);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    animation: scaling 1.5s infinite alternate;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      border: 1px solid $main-color;
+    }
+    .phone-icon {
+      color: #fff;
+      font-size: 25px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../SASS/variables" as *;
+
+.social-icons {
+  .social-icon {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 19px;
+    transition: $transition;
+    &:hover {
+      color: $main-color;
+    }
+  }
+}

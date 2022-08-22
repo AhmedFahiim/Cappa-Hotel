@@ -1,0 +1,23 @@
+@use "../../../SASS/Variables" as *;
+
+.LandingHead {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  color: #fff;
+}
+.special-small-head {
+  font-size: 15px;
+  font-weight: 300;
+  font-family: $hotel-name-family;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 10px 0;
+}
+.special-main-head {
+  font-size: 65px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-weight: 500;
+}

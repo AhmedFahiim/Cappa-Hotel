@@ -1,0 +1,17 @@
+export { default as Header } from "./Header/Header";
+export { default as Landing } from "./landing/Landing";
+export { default as ShortLanding } from "./Short-Landing/ShortLanding";
+export { default as FullLanding } from "./FullLanding/FullLanding";
+export { default as LandingHead } from "./LandingHead/LandingHead";
+export { default as PlaceInfo } from "./place Info/PlaceInfo";
+export { default as Form } from "./ReservationForm/Form";
+export { default as Luxury } from "./Luxury/Luxury";
+export { default as Rooms } from "./rooms/Rooms";
+export { default as Price } from "./Prices/Price";
+export { default as Video } from "./Video/Video";
+export { default as Facilities } from "./Facilities/Facilities";
+export { default as Testi } from "./testi/Testi";
+export { default as Services } from "./Services/Services";
+export { default as News } from "./News/News";
+export { default as Booking } from "./Booking/Booking";
+export { default as Footer } from "./Footer/Footer";

@@ -1,0 +1,101 @@
+@use "../../../../SASS/variables" as *;
+@use "../../../../SASS/Mixins" as *;
+@use "../../../../SASS/Components" as *;
+
+.news-slider-item {
+  position: relative;
+  .blog-img-holder {
+    overflow: hidden;
+    .cover-img {
+      display: block;
+      transition: $transition + 0.3;
+    }
+  }
+  .date,
+  .blog-box {
+    z-index: 1;
+  }
+  .date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    border: 1px solid#fff;
+    color: #fff;
+    text-align: center;
+    font-family: $hotel-name-family;
+    letter-spacing: 2px;
+    transition: $transition;
+    cursor: pointer;
+    &:hover {
+      background-color: $pale-red;
+      color: $main-color;
+    }
+    .month {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .day {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+  .blog-box {
+    position: absolute;
+    bottom: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: $pale-red;
+    padding: 20px 25px;
+    transition: $transition;
+    .blog-small-head {
+      color: $text-color;
+      font-size: 16px;
+      font-weight: normal;
+      font-family: $hotel-name-family;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .blog-main-head {
+      a {
+        color: $sec-color;
+        font-size: 25px;
+        font-weight: normal;
+        transition: $transition;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  .over-lay {
+    background-color: rgba(#000, 0);
+  }
+  &:hover {
+    .cover-img {
+      transform: scale(1.1);
+    }
+    .blog-box {
+      bottom: 35px;
+    }
+    .over-lay {
+      background-color: rgba(#000, 0.4);
+    }
+  }
+}
+// start media quires
+@include media(smallToLarge) {
+  .news-slider-item {
+    .blog-box {
+      padding: 15px 20px;
+      .blog-main-head {
+        a {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+} // end media quires

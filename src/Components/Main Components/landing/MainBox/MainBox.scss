@@ -1,0 +1,41 @@
+@use "../../../../SASS/Components" as *;
+
+.main-box {
+  position: relative;
+  height: 100%;
+  text-align: center;
+  background-size: 100% 100%;
+  .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    .small-head {
+      color: #fff;
+      margin: 18px 0;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    .main-word {
+      color: #fff;
+      font-size: 45px;
+      font-weight: normal;
+      word-spacing: 10px;
+      letter-spacing: 15px;
+      text-transform: uppercase;
+      margin: 15px 0;
+    }
+    .main-button {
+      border: 1px solid #fff;
+      background-color: transparent;
+      font-size: 14px;
+      &::after {
+        background-color: #fff;
+      }
+      &:hover a {
+        color: #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+.room-details {
+  .room-details-section {
+    padding: 120px 0;
+    .LandingHead {
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      .special-small-head {
+        color: $text-color;
+      }
+      .special-main-head {
+        color: $sec-color;
+        font-size: 45px;
+      }
+    }
+
+    .row {
+      justify-content: space-between;
+    }
+    .informations {
+      color: $text-color;
+      font-family: $hotel-name-family;
+      line-height: 1.6;
+      margin: 25px 0;
+      font-size: 18px;
+    }
+    .sec-head {
+      color: $sec-color;
+      font-size: 25px;
+      font-weight: normal;
+      letter-spacing: 1px;
+      margin: 20px 0;
+    }
+    .left-column {
+      .check-instructions {
+        .check {
+          .holder {
+            @include flex(row, flex-start, center);
+            margin-bottom: 15px;
+            .check-icon {
+              color: $main-color;
+              margin-right: 10px;
+              font-size: 18px;
+            }
+            .check-dates {
+              color: $text-color;
+              font-family: $hotel-name-family;
+              font-size: 17px;
+            }
+          }
+        }
+      }
+      .main-button {
+        background-color: $main-color;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-family: $hotel-name-family;
+
+        &::after {
+          background-color: $sec-color;
+        }
+      }
+    }
+    .right-column {
+      .amenities-holder {
+        @include flex(row, flex-start, center);
+        margin-bottom: 20px;
+        .amenities-icon {
+          color: $main-color;
+          margin-right: 12px;
+          font-size: 25px;
+        }
+        .info {
+          color: $text-color;
+          text-transform: capitalize;
+          font-family: $hotel-name-family;
+          font-size: 17px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+  .price-section {
+    background-color: #fff;
+    .details {
+      .section-head {
+        color: $sec-color;
+      }
+    }
+  }
+  .similar {
+    padding: 120px 0;
+    background-color: $sec-color;
+    .LandingHead {
+      .special-small-head {
+        color: $main-color;
+      }
+      .special-main-head {
+        font-size: 45px;
+        letter-spacing: 0;
+      }
+    }
+    .swiper {
+      padding-bottom: 50px;
+    }
+  }
+}

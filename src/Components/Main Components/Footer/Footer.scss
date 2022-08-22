@@ -1,0 +1,126 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/Components" as *;
+
+footer {
+  padding-top: 90px;
+  background-color: $sec-color;
+  .footer-column-head {
+    color: #fff;
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  .column {
+    padding: 0 25px;
+    &:first-child {
+      .about-hotel {
+        color: $sec-text-color;
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .language {
+        position: relative;
+        background-color: #282828;
+        width: 35%;
+        padding: 15px 20px;
+        color: $sec-text-color;
+        cursor: pointer;
+        .global {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 20px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .column-holder {
+        width: 60%;
+        margin: auto;
+      }
+      .explore {
+        .footer-link {
+          position: relative;
+          margin-bottom: 9px;
+          a {
+            position: relative;
+            z-index: 1;
+            color: $sec-text-color;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: $transition + 0.2;
+            left: 0;
+            display: block;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $main-color;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: $transition + 0.2;
+          }
+          &:hover {
+            a {
+              left: 15px;
+            }
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      address {
+        color: $sec-text-color;
+        line-height: 1.5;
+      }
+      .mobile-number {
+        margin: 15px 0;
+
+        .icon {
+          justify-content: flex-start;
+          animation: none;
+          border: none;
+          margin-right: 0;
+        }
+        .number {
+          a {
+            color: #fff;
+          }
+        }
+      }
+      .mail {
+        margin-bottom: 20px;
+        border-bottom: 1px solid $main-color;
+        width: fit-content;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .made-by {
+    background-color: #1e1e1e;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    word-spacing: 4px;
+    .copy-right {
+      color: $sec-text-color;
+    }
+    .myName {
+      color: #fff;
+    }
+  }
+}

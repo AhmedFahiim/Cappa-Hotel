@@ -1,0 +1,47 @@
+@use "../../../../SASS/variables" as *;
+@use "../../../../SASS/Mixins" as *;
+
+.faciliti {
+  position: relative;
+  .content {
+    margin-bottom: 25px;
+    border: 1px solid $thin-border;
+    padding: 25px 30px;
+    .faciliti-icon {
+      font-size: 50px;
+      color: $main-color;
+    }
+    .faciliti-head {
+      font-size: 27px;
+      color: $sec-color;
+      margin: 15px 0;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+    .faciliti-disc {
+      font-size: 15px;
+      color: $text-color;
+      line-height: 1.8;
+    }
+    .bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #f1eeeb;
+      z-index: -1;
+      opacity: 0.5;
+      font-size: 100px;
+    }
+  }
+}
+
+// start media queries
+@include media(MobileToLarge) {
+  .faciliti {
+    .content {
+      text-align: center;
+    }
+  }
+}
+// end media queries

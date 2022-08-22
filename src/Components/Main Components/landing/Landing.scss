@@ -1,0 +1,46 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/_SwiperConfig" as *;
+
+.landing {
+  height: 100vh;
+  .call-us,
+  .swiper-pagination {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .call-us {
+    transform: rotate(-90deg);
+    left: -40px;
+    transition: $transition;
+    .phone-icon {
+      transform: rotate(90deg);
+    }
+  }
+  .swiper-pagination {
+    @include flex(column, center, flex-start);
+    gap: 10px;
+    width: fit-content !important;
+    left: 92% !important;
+  }
+}
+// start animations
+@keyframes scaling {
+  100% {
+    transform: scale(1.1);
+  }
+}
+// end animations
+// start media queries
+@include media(mobile) {
+  .landing {
+    .call-us,
+    .right-side {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+// end media queries

@@ -1,0 +1,58 @@
+@use "../../../../SASS/variables" as *;
+@use "../../../../SASS/Mixins" as *;
+@use "../../../../SASS/Components" as *;
+
+.extra-services-slider-item {
+  .extra-service-img {
+    img {
+      display: block;
+    }
+  }
+  .extra-service-details {
+    padding: 15px 35px;
+    background-color: $pale-red;
+    .extra-service-name {
+      color: $sec-color;
+      font-size: 23px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+    .extra-service-price {
+      @include flex(row, flex-start, center);
+      margin: 10px 0;
+      h4 {
+        color: $main-color;
+        font-size: 40px;
+        font-weight: 500;
+      }
+      .duration {
+        font-size: 14px;
+        position: relative;
+        left: 3px;
+        top: 3px;
+        color: $text-color;
+      }
+    }
+    .extra-service-list {
+      .extra-service-list-item {
+        position: relative;
+        color: $text-color;
+        font-size: 16px;
+        letter-spacing: 1px;
+        left: 20px;
+        margin-bottom: 13px;
+        font-family: $hotel-name-family;
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: -20px;
+          transform: translateY(-50%);
+          font-size: 16px;
+          &.checked {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

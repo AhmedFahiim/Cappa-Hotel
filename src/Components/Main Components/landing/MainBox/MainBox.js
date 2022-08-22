@@ -1,0 +1,24 @@
+import React from "react";
+import { Stars, Button, OverLay } from "../../../Sub Components";
+import "./MainBox.scss";
+
+const MainBox = ({ img, small, main }) => {
+  return (
+    <article className="main-box" style={{ backgroundImage: `url(${img})` }}>
+      <div className="container">
+        <Stars name="animate__animated" />
+        <h1 className="small-head animate__animated">{small}</h1>
+        <h1 className="main-word animate__animated">{main}</h1>
+        <Button
+          name="animate__animated"
+          content={"Rooms & Suites"}
+          link={true}
+          href="#"
+        />
+      </div>
+      <OverLay />
+    </article>
+  );
+};
+
+export default MainBox;

@@ -1,0 +1,18 @@
+@use "../../../SASS/Mixins" as *;
+
+.clients {
+  padding: 20px 0;
+  .clients-slider-main-holder {
+    width: 55%;
+  }
+}
+
+// start media quires
+@include media(mobile) {
+  .clients {
+    .clients-slider-main-holder {
+      width: 100%;
+    }
+  }
+}
+// end media quires

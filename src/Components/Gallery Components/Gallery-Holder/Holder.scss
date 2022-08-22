@@ -1,0 +1,15 @@
+@use "../../../SASS/Variables" as *;
+.Gallery-Holder {
+  padding: 120px 0;
+  .row {
+    margin-bottom: 20px;
+  }
+  &.video {
+    background-color: $pale-red;
+  }
+  .LandingHead {
+    top: 0;
+    transform: translate(0);
+    margin-bottom: 50px;
+  }
+}

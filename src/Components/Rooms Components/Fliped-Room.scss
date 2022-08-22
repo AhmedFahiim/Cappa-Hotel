@@ -1,0 +1,125 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+.room-fliped-card {
+  perspective: 1000px;
+  margin-bottom: 30px;
+  .card {
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: $transition + 0.3;
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      z-index: 1;
+    }
+  }
+  .room-data-fliped {
+    .room-price-fliped {
+      font-size: 17px;
+      font-family: $hotel-name-family;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .room-name-fliped {
+      font-size: 28px;
+      font-weight: normal;
+    }
+  }
+  .card-face.front {
+    color: #fff;
+    .room-book-fliped {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: inline-block;
+      padding: 10px 5px;
+      letter-spacing: 2px;
+      border: 1px solid $thin-border;
+      cursor: pointer;
+      writing-mode: vertical-rl;
+      transition: $transition;
+      &:hover {
+        background-color: $pale-red;
+        color: $main-color;
+      }
+    }
+    .room-data-fliped {
+      position: absolute;
+      top: 80%;
+      right: 30px;
+      transform: translateY(-50%);
+      text-align: right;
+    }
+  }
+  .card-face.back {
+    background-color: $pale-red;
+    padding: 70px 35px;
+    transform: rotateY(180deg);
+    .room-data-fliped {
+      .room-price-fliped {
+        color: $main-color;
+      }
+      .room-name-fliped {
+        color: $sec-color;
+      }
+    }
+    .room-info-fliped {
+      color: $text-color;
+      margin: 25px 0;
+      line-height: 1.5;
+      font-family: $hotel-name-family;
+      font-size: 17px;
+      letter-spacing: 1px;
+    }
+    .room-features-fliped {
+      @include flex(row, flex-start, center);
+      margin: 20px 0 40px;
+      flex-wrap: wrap;
+      .feature-flip {
+        @include flex(row, flex-start, center);
+        flex-basis: 50%;
+        margin-bottom: 10px;
+        .flip-icon {
+          color: $main-color;
+          font-size: 25px;
+          margin-right: 15px;
+        }
+        .feature-data-fliped {
+          color: $text-color;
+          font-family: $hotel-name-family;
+          font-size: 17px;
+          letter-spacing: 1px;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .nav-holder {
+      .details-nav {
+        color: $text-color;
+        border-bottom: 1px solid $text-color;
+        transition: $transition;
+        &:hover {
+          border-bottom: 1px solid $main-color;
+        }
+      }
+    }
+    @include media(medium) {
+      padding: 70px 15px;
+    }
+  }
+  &:hover {
+    .card {
+      transform: rotateY(180deg);
+      .over-lay {
+        transition-delay: $transition;
+        height: 0;
+      }
+    }
+  }
+}

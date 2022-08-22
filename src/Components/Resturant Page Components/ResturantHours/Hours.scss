@@ -1,0 +1,37 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.hours {
+  padding: 120px 0;
+  .meals-schedule {
+    .meal {
+      @include flex(row, flex-start, center);
+      margin-bottom: 15px;
+      .clock {
+        margin-right: 10px;
+        color: $main-color;
+        font-size: larger;
+      }
+      .time {
+        color: $text-color;
+        font-family: $hotel-name-family;
+        font-size: 18px;
+      }
+    }
+  }
+  .returant-head {
+    color: $sec-color;
+    margin: 35px 0 20px;
+    letter-spacing: 1px;
+    font-size: 25px;
+    font-weight: normal;
+  }
+  .dress-code,
+  .terrace {
+    .rules {
+      color: $text-color;
+      font-family: $hotel-name-family;
+      font-size: 18px;
+    }
+  }
+}

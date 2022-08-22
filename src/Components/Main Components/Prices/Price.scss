@@ -1,0 +1,64 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+@use "../../../SASS/Components" as *;
+
+.price-section {
+  padding: 120px 0;
+  background-color: $sec-color;
+  .details {
+    .small-head {
+      color: $main-color;
+    }
+    .section-head {
+      color: #fff;
+      font-size: 45px;
+      font-weight: normal;
+      letter-spacing: 3px;
+      margin: 15px 0;
+    }
+    .price-disc {
+      margin-bottom: 25px;
+      color: $sec-text-color;
+      font-size: 16px;
+      line-height: 2;
+      width: 90%;
+    }
+
+    // call-us component
+    .type {
+      letter-spacing: 3px;
+      color: $sec-text-color;
+      margin-bottom: 8px;
+    }
+    .icon {
+      animation: none;
+      border: none;
+      .phone-icon {
+        font-size: 35px;
+        color: $main-color;
+      }
+    }
+    // call-us component
+  }
+  .swiper {
+    padding-bottom: 40px;
+    .swiper-pagination {
+      bottom: 0px;
+    }
+  }
+}
+// meida queries
+@include media(MobileToLarge) {
+  .row {
+    gap: 25px;
+    .call-us {
+      justify-content: center;
+    }
+    .details {
+      text-align: center;
+      .price-disc {
+        width: 100%;
+      }
+    }
+  }
+}

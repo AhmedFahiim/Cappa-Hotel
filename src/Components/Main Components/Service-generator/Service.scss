@@ -1,0 +1,94 @@
+@use "../../../SASS/variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.service-img {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  .over-lay {
+    background-color: rgba(#000, 0);
+  }
+  img {
+    transition: $transition + 0.6;
+    height: 100%;
+    display: block;
+  }
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+    .over-lay {
+      background-color: rgba(#000, 0.3);
+    }
+  }
+}
+
+.service-details {
+  padding: 90px 40px;
+  background-color: $pale-red;
+  .small-head,
+  .service-detail {
+    color: $text-color;
+  }
+  .small-head {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .main-head {
+    font-size: 35px;
+    color: $sec-color;
+    font-weight: normal;
+  }
+  .service-detail {
+    margin: 15px 0;
+    line-height: 1.8;
+  }
+  .main-button {
+    background-color: $main-color;
+    font-size: 15px;
+    text-transform: uppercase;
+    &::after {
+      background-color: $sec-color;
+    }
+    a {
+      letter-spacing: 3px;
+      font-family: $hotel-name-family;
+    }
+  }
+  .working-times {
+    @include flex(row, flex-start, center);
+    .clock {
+      color: $main-color;
+    }
+    .time {
+      margin-left: 10px;
+      color: $sec-color;
+    }
+  }
+}
+
+@include media(MobileToLarge) {
+  .service-img {
+    &:nth-child(4) {
+      order: 3;
+    }
+    &:nth-child(8) {
+      order: 7;
+    }
+  }
+  .service-details {
+    padding: 50px 20px;
+    &:nth-child(3) {
+      order: 4;
+    }
+    &:nth-child(7) {
+      order: 8;
+    }
+    &:nth-child(8) {
+      order: 7;
+    }
+    .main-head {
+      font-size: 30px;
+    }
+  }
+}
