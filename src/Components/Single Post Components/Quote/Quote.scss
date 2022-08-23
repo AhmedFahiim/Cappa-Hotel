@@ -1,0 +1,60 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.quote-holder {
+  .post-quote {
+    position: relative;
+    background-color: $pale-red;
+    padding: 50px 40px;
+    margin-top: 40px;
+    font-family: $hotel-name-family;
+    .quote {
+      color: $text-color;
+      font-size: 18px;
+      line-height: 1.7;
+      word-break: break-all;
+    }
+    .author {
+      position: relative;
+      left: 80px;
+      font-size: 17px;
+      color: $main-color;
+      display: inline-block;
+      margin-top: 20px;
+      &::after {
+        position: absolute;
+        content: "";
+        left: -80px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: $main-color;
+        width: 60px;
+        height: 1px;
+      }
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 40px;
+      transform: translateY(-50%);
+      font-size: 100px;
+      opacity: 0.1;
+    }
+  }
+  .two-images {
+    margin-top: 40px;
+    .imgs-holder {
+      @include flex(row, space-between, center);
+      img {
+        width: 48%;
+      }
+    }
+    .img-disc {
+      color: $text-color;
+      font-size: 18px;
+      font-family: $hotel-name-family;
+      line-height: 1.3;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.special-landing-head {
+  position: relative;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 1;
+  .pathes {
+    text-transform: uppercase;
+    font-family: $hotel-name-family;
+    font-size: 20px;
+    letter-spacing: 2px;
+    .path {
+      color: $main-color;
+    }
+    .page-name {
+      color: #fff;
+      margin-left: 8px;
+    }
+  }
+  .post-head {
+    color: #fff;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 20px 0;
+  }
+  .post-info {
+    &,
+    .person,
+    .landing-post-date {
+      @include flex(row, flex-start, center);
+    }
+    .person {
+      margin-right: 25px;
+      .person-name {
+        color: #fff;
+        font-size: 13px;
+        margin-left: 5px;
+      }
+      img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
+    }
+    .landing-post-date {
+      .calender {
+        color: $main-color;
+        font-size: 18px;
+        margin-right: 5px;
+      }
+      .date {
+        color: #fff;
+        font-size: 13px;
+      }
+    }
+  }
+}

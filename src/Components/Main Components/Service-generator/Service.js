@@ -5,11 +5,12 @@ import { AiOutlineClockCircle } from "../../icons";
 
 import "./Service.scss";
 
-export const ServiceImage = ({ img }) => {
+export const ServiceImage = ({ img, children }) => {
   return (
     <div className="service-img col-lg-6">
       <img src={img} alt="service" />
       <OverLay />
+      {children}
     </div>
   );
 };
@@ -20,9 +21,10 @@ export const ServiceDetails = ({
   detail,
   button,
   time,
+  href,
 }) => {
   const buttonCond = button ? (
-    <Button link={true} content="Learn More" href="#" />
+    <Button link={true} content="Read More" href={href} />
   ) : (
     <div className="working-times">
       <AiOutlineClockCircle className="clock" />

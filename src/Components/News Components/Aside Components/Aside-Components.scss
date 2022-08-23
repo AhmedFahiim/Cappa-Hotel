@@ -1,0 +1,89 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.aside-component {
+  background-color: $pale-red;
+  padding: 25px;
+  margin-bottom: 30px;
+  .aside-component-head {
+    color: $sec-color;
+    font-weight: normal;
+  }
+  .line {
+    background-color: #eee3d0;
+    height: 1px;
+    margin: 15px 0;
+  }
+  .rowP {
+    font-family: $hotel-name-family;
+    color: $text-color;
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 1px;
+    transition: $transition;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  &.search {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 10px 15px;
+    }
+    .search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 40px;
+      font-size: 19px;
+      cursor: pointer;
+    }
+  }
+  &.recent {
+    .recent-post {
+      @include flex(row, flex-start, center);
+      margin-bottom: 15px;
+      .post-img {
+        max-width: 90px;
+      }
+      .post-head {
+        flex: 1;
+        margin-left: 15px;
+      }
+    }
+  }
+  &.Archives {
+    .archive {
+      margin-bottom: 10px;
+    }
+  }
+  &.Categories {
+    a {
+      @include flex(row, flex-start, center);
+      margin-bottom: 10px;
+      .category-arrow {
+        margin-right: 7px;
+        color: $text-color;
+      }
+    }
+  }
+  &.tags {
+    .tags-holder {
+      @include flex(row, flex-start, center);
+      flex-wrap: wrap;
+      gap: 6px;
+      .tag {
+        background-color: #fff;
+        color: $text-color;
+        padding: 10px 15px;
+        font-size: 16px;
+        transition: $transition;
+        &:hover {
+          background-color: $main-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

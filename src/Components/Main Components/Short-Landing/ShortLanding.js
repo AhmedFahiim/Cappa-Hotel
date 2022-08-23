@@ -5,7 +5,7 @@ import "./ShortLanding.scss";
 
 const ShortLanding = ({ img, children }) => {
   const style = {
-    backgroundImage: `url(${img})`,
+    backgroundImage: `url(/${img})`,
   };
   return (
     <section style={style} className="short-landing">

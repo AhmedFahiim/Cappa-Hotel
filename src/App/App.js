@@ -6,6 +6,7 @@ import {
   Contact,
   Gallery,
   News,
+  SinglePost,
   Resturant,
   Rooms,
   RoomsDetails,
@@ -18,16 +19,17 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="About" element={<About />}></Route>
-        <Route path="Contact" element={<Contact />}></Route>
-        <Route path="Gallery" element={<Gallery />}></Route>
-        <Route path="News" element={<News />}></Route>
-        <Route path="Resturant" element={<Resturant />}></Route>
-        <Route path="Rooms" element={<Rooms />}></Route>
-        <Route path="RoomsDetails" element={<RoomsDetails />}></Route>
-        <Route path="Spa" element={<Spa />}></Route>
-        {/* <Route path="*" element={<NotFound />}></Route> */}
+        <Route path="/" element={<Home />} />
+        <Route path="About" element={<About />} />
+        <Route path="Contact" element={<Contact />} />
+        <Route path="Gallery" element={<Gallery />} />
+        <Route path="News" element={<News />} />
+        <Route path="News/:PostId" element={<SinglePost />} />
+        <Route path="Resturant" element={<Resturant />} />
+        <Route path="Rooms" element={<Rooms />} />
+        <Route path="RoomsDetails" element={<RoomsDetails />} />
+        <Route path="Spa" element={<Spa />} />
+        {/* <Route path="*" element={<NotFound />}/> */}
       </Routes>
     </div>
   );

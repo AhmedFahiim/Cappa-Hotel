@@ -1,12 +1,14 @@
 import React from "react";
 import "./Button.scss";
 
-const Button = ({ content, link, href, name }) => {
+import { NavLink } from "react-router-dom";
+
+const Button = ({ content, link, href = "", name }) => {
   const buttonCondition = link ? (
     <button className={`main-button ${name}`}>
-      <a className="button-link" href={href}>
+      <NavLink className="button-link" to={href}>
         {content}
-      </a>
+      </NavLink>
     </button>
   ) : (
     <button className="main-button">{content}</button>

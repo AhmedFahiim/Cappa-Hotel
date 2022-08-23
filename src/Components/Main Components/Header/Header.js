@@ -24,7 +24,7 @@ function Header() {
       <div className="container">
         <article className="logo">
           <NavLink to="/">
-            <img src={`images/${position ? "logo-dark" : "logo"}.png`} />
+            <img src={`/images/${position ? "logo-dark" : "logo"}.png`} />
           </NavLink>
         </article>
         <article className="links-holder">

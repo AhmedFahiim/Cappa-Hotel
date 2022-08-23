@@ -1,0 +1,13 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+.newsPage {
+  .posts-holder {
+    padding: 120px 0;
+  }
+  .posts {
+    @include media(large) {
+      margin-right: 30px;
+    }
+  }
+}

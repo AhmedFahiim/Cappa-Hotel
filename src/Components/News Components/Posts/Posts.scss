@@ -1,0 +1,37 @@
+@use "../../../SASS/Variables" as *;
+
+.post {
+  margin-bottom: 20px;
+  .service-img,
+  .service-details {
+    width: 100%;
+  }
+  .service-img {
+    .post-date {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px;
+      border: 1px solid $thin-border;
+      color: #fff;
+      font-family: $hotel-name-family;
+      text-align: center;
+      .post-month {
+        margin-bottom: 4px;
+        letter-spacing: 2px;
+      }
+      .post-day {
+        letter-spacing: 3px;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+  }
+  .service-details {
+    background-color: transparent;
+    padding: 30px;
+    .small-head {
+      color: $main-color;
+    }
+  }
+}

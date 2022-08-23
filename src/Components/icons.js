@@ -1,10 +1,18 @@
 import { MdOutlineBed } from "react-icons/md";
-import { BiTimer } from "react-icons/bi";
+import { BiTimer, BiRightArrowAlt } from "react-icons/bi";
 import { GoTriangleDown } from "react-icons/go";
 import { TiSocialYoutubeCircular } from "react-icons/ti";
 import { CgArrowRight, CgArrowLeft } from "react-icons/cg";
 import { FiPhoneCall, FiTwitter } from "react-icons/fi";
-import { BsArrowRight, BsCheck2All, BsPlay, BsWifi } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsCheck2All,
+  BsPlay,
+  BsWifi,
+  BsArrowLeftShort,
+  BsArrowRightShort,
+  BsChatText,
+} from "react-icons/bs";
 import { FaFacebookF, FaPinterestP, FaSwimmingPool } from "react-icons/fa";
 import {
   AiOutlineGlobal,
@@ -14,6 +22,7 @@ import {
   AiOutlineCalendar,
   AiOutlineArrowDown,
   AiOutlineClockCircle,
+  AiOutlineSearch,
 } from "react-icons/ai";
 import {
   GiBathtub,
@@ -54,4 +63,9 @@ export {
   AiOutlineClockCircle,
   IoIosPeople,
   BiTimer,
+  AiOutlineSearch,
+  BiRightArrowAlt,
+  BsArrowLeftShort,
+  BsArrowRightShort,
+  BsChatText,
 };
