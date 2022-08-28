@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Stars, CallUs } from "../../Sub Components";
 import "./Luxury.scss";
 
 const Luxury = () => {
+  const luxurySection = useRef();
+  const [Reached, setReached] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = () => {
+      if (
+        window.pageYOffset + 900 >
+        luxurySection.current.offsetTop +
+          luxurySection.current.clientHeight -
+          window.innerHeight
+      ) {
+        setReached(true);
+      }
+    };
+  }, []);
+
   return (
-    <section className="luxury">
+    <section ref={luxurySection} className={`luxury ${Reached && "reached"}`}>
       <div className="container">
         <div className="row">
           <article className="main-content col-lg-5">

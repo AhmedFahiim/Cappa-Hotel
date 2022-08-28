@@ -1,12 +1,15 @@
 import React from "react";
 import "./Single-Post.scss";
 
-import { ShortLanding, Footer } from "../../Components/Main Components";
+import {
+  ShortLanding,
+  Footer,
+  GetInTouch,
+} from "../../Components/Main Components";
 import {
   SpecialLandingHead,
   PostDetails,
   Comment,
-  // Replay,
   Quote,
 } from "../../Components/Single Post Components";
 
@@ -38,7 +41,13 @@ const SinglePost = () => {
             <article className="main-content col-lg-8 col-xl-7">
               <PostDetails head={mainHead} img={postImg} />
               <Quote />
-              <Comment />
+              <Comment
+                img="images/team/2.jpg"
+                Name="robert martin"
+                date="29 October 2022"
+                comment="Restaurant ultricies nibh non dolor maximus sceleue inte molliser rana neque nec tempor. Interdum et malesuada fames ac ante ipsum primis in faucibus."
+              />
+              <GetInTouch butotnContent="Send Comment" />
             </article>
             <article className="aside col-lg-4 col-xl-3">
               <Aside data={AsideData} tags={tags} />

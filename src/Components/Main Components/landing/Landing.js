@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { CallUs } from "../../Sub Components";
 import Header from "../Header/Header";
@@ -15,15 +15,27 @@ import "swiper/scss/effect-fade";
 
 function Landing() {
   const swiper = useRef();
+  const [Animated, setAnimated] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      swiper.current.swiper.slideNext();
-    }, 3000);
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  // useEffect(() => {
+  //   setAnimated(true);
+  //   const interval = setInterval(() => {
+  //     swiper.current.swiper.slideNext();
+  //     setAnimated(true);
+  //   }, 4000);
+  //   return () => {
+  //     setInterval(interval);
+  //   };
+  // }, []);
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setAnimated(false);
+  //   }, 5000);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   return (
     <section className="landing">
@@ -42,6 +54,7 @@ function Landing() {
             small={"Luxury Hotel & Best Resort"}
             main={["Enjoy a Luxury", <br />, "Experience"]}
             img="images/slider/1.jpg"
+            animate={Animated}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -49,6 +62,7 @@ function Landing() {
             small={"Unique Place to Relax & Enjoy"}
             main={["The Perfect", <br />, "Base For You"]}
             img="images/slider/2.jpg"
+            animate={Animated}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -56,6 +70,7 @@ function Landing() {
             small="The Ultimate Luxury Experience"
             main={["Enjoy The Best", <br />, " Moments of Life"]}
             img="images/slider/3.jpg"
+            animate={Animated}
           />
         </SwiperSlide>
       </Swiper>

@@ -72,6 +72,9 @@
       }
       form {
         padding-top: 15px;
+        .half {
+          flex-basis: 48%;
+        }
         .row {
           justify-content: space-between;
           & > div {
@@ -81,22 +84,52 @@
             padding: 15px 20px;
             cursor: pointer;
             .box-head {
-              font-size: 17px;
+              width: 100%;
+              font-size: 16px;
               color: $text-color;
               font-family: $hotel-name-family;
               letter-spacing: 1px;
             }
             .icon {
-              position: absolute;
-              top: 50%;
-              right: 20px;
-              transform: translateY(-50%);
               color: $main-color;
               font-size: 17px;
             }
-          }
-          .half {
-            flex-basis: 48%;
+            .detail-box {
+              .wraper {
+                @include flex(row, space-between, center);
+                background-color: #fff;
+                cursor: pointer;
+              }
+              .dropdown-menu-booking {
+                position: absolute;
+                background-color: #fff;
+                top: calc(-100% - 145px);
+                left: 0;
+                width: 100%;
+                text-align: center;
+                border-bottom: 2px solid $main-color;
+                opacity: 0;
+                pointer-events: none;
+                transition: $transition;
+                z-index: 1000;
+                &.active {
+                  opacity: 1;
+                  pointer-events: auto;
+                }
+                .dropdown-item {
+                  padding: 10px 0;
+                  border-bottom: 1px solid #dedede;
+                  color: $sec-color;
+                  font-size: 14px;
+                  cursor: pointer;
+                  &:hover,
+                  &.active {
+                    background-color: $main-color;
+                    color: #fff;
+                  }
+                }
+              }
+            }
           }
           .main-button {
             background-color: $main-color;

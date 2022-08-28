@@ -1,0 +1,61 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.replay-comment {
+  width: 80%;
+  margin: 40px 0;
+  @include media(MobileToLarge) {
+    width: 100%;
+  }
+  .form-head {
+    color: $sec-color;
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .replay-form {
+    .row {
+      justify-content: space-between;
+    }
+    input,
+    textarea {
+      width: 100%;
+      padding: 15px 0;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid $thin-border;
+      transition: $transition;
+      &::placeholder {
+        color: $text-color;
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-family: $hotel-name-family;
+        text-transform: capitalize;
+      }
+      &:focus {
+        border-color: $main-color;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    .input {
+      margin-bottom: 30px;
+      @include media(MedToInf) {
+        &.name,
+        &.mail {
+          flex-basis: 48%;
+        }
+      }
+    }
+    .main-button {
+      background-color: $main-color;
+      color: #fff;
+      font-size: 17px;
+      &::after {
+        background-color: $sec-color;
+      }
+    }
+  }
+}

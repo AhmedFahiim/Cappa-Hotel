@@ -1,7 +1,8 @@
 import { MdOutlineBed } from "react-icons/md";
-import { BiTimer, BiRightArrowAlt } from "react-icons/bi";
-import { GoTriangleDown } from "react-icons/go";
+import { RiArrowGoBackLine } from "react-icons/ri";
 import { TiSocialYoutubeCircular } from "react-icons/ti";
+import { GoTriangleDown, GoLocation } from "react-icons/go";
+import { BiTimer, BiRightArrowAlt } from "react-icons/bi";
 import { CgArrowRight, CgArrowLeft } from "react-icons/cg";
 import { FiPhoneCall, FiTwitter } from "react-icons/fi";
 import {
@@ -23,6 +24,7 @@ import {
   AiOutlineArrowDown,
   AiOutlineClockCircle,
   AiOutlineSearch,
+  AiOutlineMail,
 } from "react-icons/ai";
 import {
   GiBathtub,
@@ -68,4 +70,7 @@ export {
   BsArrowLeftShort,
   BsArrowRightShort,
   BsChatText,
+  RiArrowGoBackLine,
+  GoLocation,
+  AiOutlineMail,
 };

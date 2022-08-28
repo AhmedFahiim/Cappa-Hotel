@@ -4,6 +4,7 @@ button {
   position: relative;
   padding: 12px 25px;
   transition: $transition;
+  font-family: $hotel-name-family;
   &::after {
     position: absolute;
     content: "";

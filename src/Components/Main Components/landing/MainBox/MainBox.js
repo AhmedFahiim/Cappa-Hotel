@@ -2,15 +2,21 @@ import React from "react";
 import { Stars, Button, OverLay } from "../../../Sub Components";
 import "./MainBox.scss";
 
-const MainBox = ({ img, small, main }) => {
+const MainBox = ({ img, small, main, animate }) => {
   return (
     <article className="main-box" style={{ backgroundImage: `url(${img})` }}>
       <div className="container">
-        <Stars name="animate__animated" />
-        <h1 className="small-head animate__animated">{small}</h1>
-        <h1 className="main-word animate__animated">{main}</h1>
+        <Stars name={`${animate ? "animated" : "normal"}`} />
+        <h1 className={`small-head ${animate ? "animated" : "normal"}`}>
+          {small}
+        </h1>
+        <h1
+          className={`main-word ${animate} ${animate ? "animated" : "normal"}`}
+        >
+          {main}
+        </h1>
         <Button
-          name="animate__animated"
+          name={`${animate ? "animated" : "normal"}`}
           content={"Rooms & Suites"}
           link={true}
           href="#"

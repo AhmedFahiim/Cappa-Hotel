@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../Sub Components";
 import { GoTriangleDown } from "../../icons";
 import "./Form.scss";
 
 const Form = () => {
+  const [Adults, setAdults] = useState("1 Audult");
+  const [Childrens, setChildrens] = useState("Children");
+  const [Rooms, setRooms] = useState("1 Room");
+
+  useEffect(() => {
+    let dropdownMenu = document.querySelectorAll(".dropdown-menu");
+
+    dropdownMenu.forEach((menu, index) => {
+      Array.from(menu.children).forEach((item) => {
+        item.addEventListener("click", (e) => {
+          if (index === 0) setAdults(e.currentTarget.textContent);
+          if (index === 1) setChildrens(e.currentTarget.textContent);
+          if (index === 2) setRooms(e.currentTarget.textContent);
+        });
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    let boxsArray = document.querySelectorAll(".detail");
+    let dropdownMenu = document.querySelectorAll(".dropdown-menu");
+
+    boxsArray.forEach((box, index) => {
+      box.addEventListener("click", () => {
+        dropdownMenu.forEach((menu) => {
+          if (dropdownMenu[index] != menu) {
+            menu.classList.remove("active");
+          }
+        });
+        dropdownMenu[index].classList.toggle("active");
+      });
+    });
+  }, []);
+
   return (
     <section className="form">
       <div className="container">
@@ -19,7 +53,7 @@ const Form = () => {
           <div className="details col-xl-6">
             <div className="detail">
               <div className="wraper">
-                <span className="head">1 Adult</span>
+                <span className="head">{Adults}</span>
                 <GoTriangleDown className="arrow-down" />
               </div>
               <ul className="dropdown-menu">
@@ -31,7 +65,7 @@ const Form = () => {
             </div>
             <div className="detail">
               <div className="wraper">
-                <span className="head">Children</span>
+                <span className="head">{Childrens}</span>
                 <GoTriangleDown className="arrow-down" />
               </div>
               <ul className="dropdown-menu">
@@ -44,7 +78,7 @@ const Form = () => {
             </div>
             <div className="detail">
               <div className="wraper">
-                <span className="head">1 Room</span>
+                <span className="head">{Rooms}</span>
                 <GoTriangleDown className="arrow-down" />
               </div>
               <ul className="dropdown-menu">

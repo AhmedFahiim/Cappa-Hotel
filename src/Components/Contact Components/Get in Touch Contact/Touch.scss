@@ -1,0 +1,62 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.touch-us {
+  padding: 120px 0;
+  .row {
+    justify-content: space-between;
+  }
+  .hotel-data {
+    .hotel-name {
+      color: $sec-color;
+      font-weight: normal;
+    }
+    .hotel-disc {
+      color: $sec-color;
+      font-family: $hotel-name-family;
+      font-size: 17px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      line-height: 1.6;
+      margin: 25px 0;
+    }
+    .icons-data {
+      @include flex(row, flex-start, center);
+      margin-bottom: 25px;
+      .data-icon {
+        font-size: 35px;
+        color: $main-color;
+        margin-right: 15px;
+      }
+      .contact-main-content {
+        @include flex(column, flex-start, flex-start);
+        font-family: $hotel-name-family;
+        letter-spacing: 1px;
+        gap: 5px;
+        .head-word {
+          color: $text-color;
+          text-transform: capitalize;
+          font-size: 17px;
+          font-weight: 300;
+        }
+        a {
+          text-decoration: none;
+          color: $main-color;
+          font-size: 23px;
+        }
+        address {
+          color: $sec-color;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .hotel-contact-form {
+    .replay-comment {
+      margin: 0;
+      .form-head {
+        font-size: 24px;
+      }
+    }
+  }
+}

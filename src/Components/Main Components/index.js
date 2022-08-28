@@ -5,6 +5,7 @@ export { default as FullLanding } from "./FullLanding/FullLanding";
 export { default as LandingHead } from "./LandingHead/LandingHead";
 export { default as PlaceInfo } from "./place Info/PlaceInfo";
 export { default as Form } from "./ReservationForm/Form";
+export { default as GetInTouch } from "./Get in Touch/GetInTouch";
 export { default as Luxury } from "./Luxury/Luxury";
 export { default as Rooms } from "./rooms/Rooms";
 export { default as Price } from "./Prices/Price";

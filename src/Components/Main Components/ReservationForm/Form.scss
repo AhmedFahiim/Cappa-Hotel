@@ -13,6 +13,10 @@
       @include flex(row, flex-start, center);
       padding: 0;
     }
+    .check input,
+    .wraper {
+      border-right: 1px solid $thin-border;
+    }
     .check {
       .check-input {
         height: 100%;
@@ -32,6 +36,7 @@
         }
       }
       .wraper {
+        position: relative;
         @include flex(row, space-between, center);
         padding: 15px 20px;
         background-color: #fff;

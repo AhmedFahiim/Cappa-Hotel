@@ -1,0 +1,49 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.comment {
+  @include flex(row, flex-start, flex-start);
+  margin-top: 60px;
+  .comment-person-image {
+    margin-right: 30px;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  .comment-data {
+    flex: 1;
+    .name-date {
+      @include flex(row, flex-start, center);
+      margin: 10px 0 20px;
+      .person-name {
+        color: $sec-color;
+        font-size: 18px;
+        text-transform: capitalize;
+        margin-right: 15px;
+      }
+      .comment-date {
+        color: $text-color;
+        font-size: 14px;
+      }
+    }
+    .comment-content {
+      color: $text-color;
+      font-family: $hotel-name-family;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .replay-comment {
+      @include flex(row, flex-start, center);
+      color: $main-color;
+      cursor: pointer;
+      .replay-word {
+        font-size: 14px;
+        margin-right: 8px;
+      }
+    }
+  }
+}
