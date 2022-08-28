@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { ServiceImage, ServiceDetails } from "../Service-generator/Service";
 import "./Services.scss";
 
 const Services = () => {
+  const servicesSection = useRef();
+  const [Reached, setReached] = useState(false);
+
+  // useEffect(() => {
+  //   window.onscroll = () => {
+  //     if (
+  //       window.pageYOffset + 1500 >
+  //       servicesSection.current.offsetTop +
+  //         servicesSection.current.clientHeight -
+  //         window.innerHeight
+  //     ) {
+  //       setReached(true);
+  //     }
+  //   };
+  // }, []);
+
   return (
-    <section className="services">
+    <section
+      ref={servicesSection}
+      className={`services ${Reached && "reached"}`}
+    >
       <div className="container">
         <div className="row">
           <ServiceImage img="images/resturant/1.jpg" />

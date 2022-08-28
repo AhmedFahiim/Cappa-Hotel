@@ -1,6 +1,8 @@
 @use "../../../SASS/variables" as *;
 @use "../../../SASS/Mixins" as *;
 
+$transitionDelay: 0.3s;
+
 .facilities {
   padding: 120px 0;
   .facilities-section-head {
@@ -22,6 +24,23 @@
   .facilities {
     .facilities-section-head {
       text-align: center;
+    }
+  }
+}
+@include media(MedToInf) {
+  .facilities {
+    &.reached {
+      .faciliti {
+        top: 0;
+        opacity: 1;
+        transition: $transition + 0.7;
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: $transitionDelay;
+          }
+          $transitionDelay: $transitionDelay + 0.3s;
+        }
+      }
     }
   }
 }

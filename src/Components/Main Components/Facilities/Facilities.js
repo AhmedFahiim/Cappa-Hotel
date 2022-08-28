@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Faciliti from "./Faciliti/Faciliti";
 import {
   GiPlanetConquest,
@@ -11,8 +11,27 @@ import {
 import "./Facilities.scss";
 
 const Facilities = () => {
+  const facilitiSection = useRef();
+  const [Reached, setReached] = useState(false);
+
+  // useEffect(() => {
+  //   window.onscroll = () => {
+  //     if (
+  //       window.pageYOffset + 400 >
+  //       facilitiSection.current.offsetTop +
+  //         facilitiSection.current.clientHeight -
+  //         window.innerHeight
+  //     ) {
+  //       setReached(true);
+  //     }
+  //   };
+  // }, []);
+
   return (
-    <section className="facilities">
+    <section
+      ref={facilitiSection}
+      className={`facilities ${Reached && "reached"}`}
+    >
       <div className="container">
         <article className="facilities-section-head">
           <h4 className="small-head">OUR SERVICES</h4>

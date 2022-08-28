@@ -44,4 +44,10 @@
     }
   }
 }
+@include media(MedToInf) {
+  .faciliti {
+    top: 100px;
+    opacity: 0;
+  }
+}
 // end media queries
