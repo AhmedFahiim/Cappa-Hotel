@@ -6,18 +6,18 @@ const Services = () => {
   const servicesSection = useRef();
   const [Reached, setReached] = useState(false);
 
-  // useEffect(() => {
-  //   window.onscroll = () => {
-  //     if (
-  //       window.pageYOffset + 1500 >
-  //       servicesSection.current.offsetTop +
-  //         servicesSection.current.clientHeight -
-  //         window.innerHeight
-  //     ) {
-  //       setReached(true);
-  //     }
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        window.pageYOffset + 1600 >
+        servicesSection.current.offsetTop +
+          servicesSection.current.clientHeight -
+          window.innerHeight
+      ) {
+        setReached(true);
+      }
+    });
+  }, []);
 
   return (
     <section

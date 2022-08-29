@@ -14,18 +14,18 @@ const Facilities = () => {
   const facilitiSection = useRef();
   const [Reached, setReached] = useState(false);
 
-  // useEffect(() => {
-  //   window.onscroll = () => {
-  //     if (
-  //       window.pageYOffset + 400 >
-  //       facilitiSection.current.offsetTop +
-  //         facilitiSection.current.clientHeight -
-  //         window.innerHeight
-  //     ) {
-  //       setReached(true);
-  //     }
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        window.pageYOffset + 550 >
+        facilitiSection.current.offsetTop +
+          facilitiSection.current.clientHeight -
+          window.innerHeight
+      ) {
+        setReached(true);
+      }
+    });
+  }, []);
 
   return (
     <section

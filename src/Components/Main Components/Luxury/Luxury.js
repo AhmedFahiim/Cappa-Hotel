@@ -6,18 +6,18 @@ const Luxury = () => {
   const luxurySection = useRef();
   const [Reached, setReached] = useState(false);
 
-  // useEffect(() => {
-  //   window.onscroll = () => {
-  //     if (
-  //       window.pageYOffset + 400 >
-  //       luxurySection.current.offsetTop +
-  //         luxurySection.current.clientHeight -
-  //         window.innerHeight
-  //     ) {
-  //       setReached(true);
-  //     }
-  //   };
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (
+        window.pageYOffset + 400 >
+        luxurySection.current.offsetTop +
+          luxurySection.current.clientHeight -
+          window.innerHeight
+      ) {
+        setReached(true);
+      }
+    });
+  }, []);
 
   return (
     <section ref={luxurySection} className={`luxury ${Reached && "reached"}`}>

@@ -77,12 +77,12 @@
       .main-content {
         top: 0;
         opacity: 1;
-        transition: $transition + 1.2;
+        transition: top 1.5s, opacity 1.8s;
       }
       .imgs-box {
         img {
           opacity: 1;
-          transition: $transition + 1.2;
+          transition: top 1.5s, opacity 1.8s;
           &:first-child {
             top: 0;
             transition-delay: 0.2s;

@@ -15,25 +15,24 @@ import "swiper/scss/effect-fade";
 
 function Landing() {
   const swiper = useRef();
-  const [Animated, setAnimated] = useState(false);
+  const [Animated, setAnimated] = useState(true);
 
   // useEffect(() => {
-  //   setAnimated(true);
   //   const interval = setInterval(() => {
   //     swiper.current.swiper.slideNext();
   //     setAnimated(true);
-  //   }, 4000);
+  //   }, 3000);
   //   return () => {
-  //     setInterval(interval);
+  //     clearInterval(interval);
   //   };
   // }, []);
 
   // useEffect(() => {
-  //   const interval = setInterval(() => {
+  //   const intervalDelete = setInterval(() => {
   //     setAnimated(false);
   //   }, 5000);
   //   return () => {
-  //     clearInterval(interval);
+  //     clearInterval(intervalDelete);
   //   };
   // }, []);
 

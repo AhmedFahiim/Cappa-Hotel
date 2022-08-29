@@ -1,9 +1,17 @@
-import React from "react";
-import Stars from "../../Sub Components/Stars/Stars";
+import React, { useState } from "react";
+import { Stars, Popup } from "../../Sub Components";
 import { BsPlay } from "../../icons";
 import "./Video.scss";
 
+export const VideoContext = React.createContext();
+
 const Video = () => {
+  // const [playVideo, setPlayVideo] = useState(false);
+
+  const clickHandler = () => {
+    // setPlayVideo(true);
+  };
+
   return (
     <section
       className="video"
@@ -20,10 +28,16 @@ const Video = () => {
         <h4 className="small-head">THE CAPPA LUXURY HOTEL</h4>
         <h4 className="video-section-head">Promotional Video</h4>
         <div className="playVideo">
-          <BsPlay className="play" />
+          <BsPlay className="play" onClick={clickHandler} />
         </div>
       </article>
       <div className="over-lay"></div>
+      {/* <VideoContext.Provider value={[playVideo, setPlayVideo]}>
+        <Popup
+          type="Video"
+          source="https://www.youtube.com/embed/xh4GnTKFQso"
+        />
+      </VideoContext.Provider> */}
     </section>
   );
 };

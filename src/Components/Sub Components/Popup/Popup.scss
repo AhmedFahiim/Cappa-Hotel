@@ -1,0 +1,47 @@
+@use "../../../SASS/Variables" as *;
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(#000, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  transition: $transition + 0.3;
+  .main-holder {
+    width: 60%;
+    text-align: right;
+    .closeIcon {
+      color: $text-color;
+      font-size: 20px;
+      transition: $transition;
+      margin-bottom: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .type-holder {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: 60vh;
+        border: 0;
+      }
+    }
+  }
+  &.display {
+    pointer-events: auto;
+    z-index: 1000;
+    opacity: 1;
+  }
+}

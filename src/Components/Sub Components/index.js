@@ -6,3 +6,4 @@ export { default as OverLay } from "./OverLay/OverLay";
 export { default as Stars } from "./Stars/Stars";
 export { default as Clients } from "./clients/Clients";
 export { default as Pagination } from "./Pagination/Pagination";
+export { default as Popup } from "./Popup/Popup";

@@ -12,19 +12,26 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    .small-head,
+    .main-word,
+    .main-button {
+      position: relative;
+      &.animated {
+        top: 0;
+        opacity: 1;
+        transition: $transition + 1.2;
+      }
+      &.normal {
+        top: 50px;
+        opacity: 0;
+      }
+    }
     .small-head {
       color: #fff;
       margin: 18px 0;
       text-transform: uppercase;
       font-weight: 300;
-      &.animated {
-        animation: fadeInUp 1s linear;
-        animation-delay: 0.4s;
-      }
-      &.normal {
-        animation: none;
-        animation-delay: 0s;
-      }
+      transition-delay: 0.8s;
     }
     .main-word {
       color: #fff;
@@ -34,32 +41,19 @@
       letter-spacing: 15px;
       text-transform: uppercase;
       margin: 15px 0;
-      &.animated {
-        animation: fadeInUp 1s linear;
-        animation-delay: 0.8s;
-      }
-      &.normal {
-        animation: none;
-        animation-delay: 0s;
-      }
+      transition-delay: 1.2s;
     }
     .main-button {
       border: 1px solid #fff;
       background-color: transparent;
       font-size: 17px;
+      transition-delay: 1.5s;
+
       &::after {
         background-color: #fff;
       }
       &:hover a {
         color: #000;
-      }
-      &.animated {
-        animation: fadeInUp 1s linear;
-        animation-delay: 1s;
-      }
-      &.normal {
-        animation: none;
-        animation-delay: 0s;
       }
     }
   }

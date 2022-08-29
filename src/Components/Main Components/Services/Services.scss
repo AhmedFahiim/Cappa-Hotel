@@ -3,6 +3,7 @@
 
 .services {
   padding: 120px 0;
+  overflow: hidden;
 }
 
 @include media(MedToInf) {
@@ -10,32 +11,21 @@
     .service-img,
     .service-details {
       opacity: 0;
-      transition: $transition + 1;
     }
     .row {
-      & > :nth-child(1) {
-        left: -80px;
-      }
-      & > :nth-child(2) {
-        right: -80px;
-      }
-      & > :nth-child(3) {
-        left: -80px;
-      }
-      & > :nth-child(4) {
-        right: -80px;
-      }
-      & > :nth-child(5) {
-        left: -80px;
-      }
-      & > :nth-child(6) {
-        right: -80px;
-      }
+      & > :nth-child(1),
+      & > :nth-child(3),
+      & > :nth-child(5),
       & > :nth-child(7) {
-        left: -80px;
+        left: -120px;
+        transition: left 1.5s, opacity 2s;
       }
+      & > :nth-child(2),
+      & > :nth-child(4),
+      & > :nth-child(6),
       & > :nth-child(8) {
-        right: -80px;
+        right: -120px;
+        transition: right 1.5s, opacity 2s;
       }
     }
     &.reached {
@@ -44,29 +34,29 @@
         opacity: 1;
       }
       .row {
-        & > :nth-child(1) {
-          left: 0px;
-        }
-        & > :nth-child(2) {
-          right: 0px;
-        }
-        & > :nth-child(3) {
-          left: 0px;
-        }
-        & > :nth-child(4) {
-          right: 0px;
-        }
-        & > :nth-child(5) {
-          left: 0px;
-        }
-        & > :nth-child(6) {
-          right: 0px;
-        }
+        & > :nth-child(1),
+        & > :nth-child(3),
+        & > :nth-child(5),
         & > :nth-child(7) {
-          left: 0px;
+          left: 0;
         }
+        & > :nth-child(2),
+        & > :nth-child(4),
+        & > :nth-child(6),
         & > :nth-child(8) {
-          right: 0px;
+          right: 0;
+        }
+        & > :nth-child(3),
+        & > :nth-child(4) {
+          transition-delay: 1s;
+        }
+        & > :nth-child(5),
+        & > :nth-child(6) {
+          transition-delay: 1.5s;
+        }
+        & > :nth-child(7),
+        & > :nth-child(8) {
+          transition-delay: 2s;
         }
       }
     }
