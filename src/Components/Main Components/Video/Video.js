@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { Stars, Popup } from "../../Sub Components";
+import React, { useContext } from "react";
+import { Stars, Popup, OverLay } from "../../Sub Components";
 import { BsPlay } from "../../icons";
 import "./Video.scss";
 
-export const VideoContext = React.createContext();
+import { VideoContext } from "../../../App/App";
 
 const Video = () => {
-  // const [playVideo, setPlayVideo] = useState(false);
+  const [, setPlayVideo] = useContext(VideoContext);
 
   const clickHandler = () => {
-    // setPlayVideo(true);
+    setPlayVideo(true);
   };
 
   return (
@@ -31,13 +31,9 @@ const Video = () => {
           <BsPlay className="play" onClick={clickHandler} />
         </div>
       </article>
-      <div className="over-lay"></div>
-      {/* <VideoContext.Provider value={[playVideo, setPlayVideo]}>
-        <Popup
-          type="Video"
-          source="https://www.youtube.com/embed/xh4GnTKFQso"
-        />
-      </VideoContext.Provider> */}
+      <OverLay />
+
+      <Popup type="Video" source="https://www.youtube.com/embed/xh4GnTKFQso" />
     </section>
   );
 };

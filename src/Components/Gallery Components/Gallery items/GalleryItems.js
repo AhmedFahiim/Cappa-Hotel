@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./GalleryItems.scss";
 import { OverLay, Popup } from "../../Sub Components";
 import { BsPlay } from "../../icons";
 
-export const GalleryContext = React.createContext();
+import { GalleryContext } from "../../../App/App";
 
-const GalleryItems = ({ video, col, src }) => {
-  const [PlayGalley, setPlayGalley] = useState(false);
+const GalleryItems = ({ type, col, src, popSource }) => {
+  const [, setPlayGalley] = useContext(GalleryContext);
 
   const clickHandler = () => {
     setPlayGalley(true);
   };
 
-  const videoCond = video && (
-    <div className="video-icon">
-      <BsPlay className="play" onClick={clickHandler} />
+  const videoCond = type == "Video" && (
+    <div className="video-icon" onClick={clickHandler}>
+      <BsPlay className="play" />
     </div>
   );
   return (
@@ -23,13 +23,8 @@ const GalleryItems = ({ video, col, src }) => {
         <img src={src} alt="gallery-item" />
         {videoCond}
         <OverLay />
-        <GalleryContext.Provider value={[PlayGalley, setPlayGalley]}>
-          <Popup
-            type="Video"
-            source="https://www.youtube.com/embed/xh4GnTKFQso"
-          />
-        </GalleryContext.Provider>
       </div>
+      <Popup type="Video" source={popSource} />
     </section>
   );
 };
