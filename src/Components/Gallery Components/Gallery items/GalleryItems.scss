@@ -4,7 +4,7 @@
 
 .gallery-item {
   cursor: pointer;
-  .oevr-lay-holder {
+  .over-lay-holder {
     position: relative;
     overflow: hidden;
     img {
@@ -51,6 +51,13 @@
       .over-lay {
         background-color: rgba(#000, 0.3);
       }
+    }
+  }
+  &.clickedItem {
+    .popup {
+      pointer-events: auto;
+      z-index: 1000;
+      opacity: 1;
     }
   }
 }

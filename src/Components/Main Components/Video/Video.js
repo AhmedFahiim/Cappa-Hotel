@@ -32,7 +32,6 @@ const Video = () => {
         </div>
       </article>
       <OverLay />
-
       <Popup type="Video" source="https://www.youtube.com/embed/xh4GnTKFQso" />
     </section>
   );

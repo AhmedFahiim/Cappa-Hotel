@@ -1,30 +1,41 @@
 import React, { useContext } from "react";
 import "./GalleryItems.scss";
-import { OverLay, Popup } from "../../Sub Components";
-import { BsPlay } from "../../icons";
 
+import { OverLay, Popup } from "../../Sub Components";
 import { GalleryContext } from "../../../App/App";
 
-const GalleryItems = ({ type, col, src, popSource }) => {
-  const [, setPlayGalley] = useContext(GalleryContext);
+import { BsPlay } from "../../icons";
 
-  const clickHandler = () => {
-    setPlayGalley(true);
+const GalleryItems = ({ type, col, src, popSource }) => {
+  const [ShowImage, setShowImage] = useContext(GalleryContext);
+
+  // const VideoClickHandler = () => {
+  //   setPlayGalley(true);
+  // };
+
+  const ImageClickHandler = (e) => {
+    e.currentTarget.classList.add("clickedItem");
   };
 
   const videoCond = type == "Video" && (
-    <div className="video-icon" onClick={clickHandler}>
+    <div className="video-icon">
       <BsPlay className="play" />
     </div>
   );
+
   return (
-    <section className={`gallery-item ${col}`}>
-      <div className="oevr-lay-holder">
+    <section
+      className={`gallery-item ${col} `}
+      onClick={(e) => {
+        ImageClickHandler(e);
+      }}
+    >
+      <div className="over-lay-holder">
         <img src={src} alt="gallery-item" />
         {videoCond}
         <OverLay />
       </div>
-      <Popup type="Video" source={popSource} />
+      <Popup type={type} source={popSource} />
     </section>
   );
 };
