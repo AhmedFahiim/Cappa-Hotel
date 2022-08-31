@@ -70,11 +70,9 @@ const Booking = () => {
                 <div className="row">
                   <div className="check-in">
                     <input className="box-head" type="date" />
-                    {/* <AiOutlineCalendar className="icon" /> */}
                   </div>
                   <div className="check-out">
                     <input className="box-head" type="date" />
-                    {/* <AiOutlineCalendar className="icon" /> */}
                   </div>
                   <div className="half Adults col-6">
                     <div className="audults detail-box">

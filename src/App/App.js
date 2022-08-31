@@ -11,20 +11,20 @@ import {
   Rooms,
   RoomsDetails,
   Spa,
-  // NotFound,
+  NotFound,
 } from "../Pages";
 import "./App.scss";
 
 export const VideoContext = React.createContext();
-export const GalleryContext = React.createContext();
+export const ActivePopupContext = React.createContext();
 
 function App() {
   const [playVideo, setPlayVideo] = useState(false);
-  const [PlayGalley, setPlayGalley] = useState(false);
+  const [ActivePopup, setActivePopup] = useState(null);
 
   return (
     <VideoContext.Provider value={[playVideo, setPlayVideo]}>
-      <GalleryContext.Provider value={[PlayGalley, setPlayGalley]}>
+      <ActivePopupContext.Provider value={[ActivePopup, setActivePopup]}>
         <div className="App">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -37,10 +37,10 @@ function App() {
             <Route path="Rooms" element={<Rooms />} />
             <Route path="RoomsDetails" element={<RoomsDetails />} />
             <Route path="Spa" element={<Spa />} />
-            {/* <Route path="*" element={<NotFound />}/> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
-      </GalleryContext.Provider>
+      </ActivePopupContext.Provider>
     </VideoContext.Provider>
   );
 }

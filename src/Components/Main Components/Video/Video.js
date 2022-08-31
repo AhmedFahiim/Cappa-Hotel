@@ -5,6 +5,14 @@ import "./Video.scss";
 
 import { VideoContext } from "../../../App/App";
 
+const styling = {
+  position: "relative",
+  height: "70vh",
+  backgroundImage: "url(images/slider/2.jpg)",
+  backgroundAttachment: "fixed",
+  backgroundSize: "cover",
+};
+
 const Video = () => {
   const [, setPlayVideo] = useContext(VideoContext);
 
@@ -13,16 +21,7 @@ const Video = () => {
   };
 
   return (
-    <section
-      className="video"
-      style={{
-        position: "relative",
-        height: "70vh",
-        backgroundImage: "url(images/slider/2.jpg)",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="video" style={styling}>
       <article className="video-main-content">
         <Stars />
         <h4 className="small-head">THE CAPPA LUXURY HOTEL</h4>

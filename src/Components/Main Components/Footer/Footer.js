@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineGlobal, FaFacebookF } from "../../icons";
 import { CallUs, Social } from "../../Sub Components";
-
+import { NavLink } from "react-router-dom";
 import "./Footer.scss";
 
 let year = new Date().getFullYear();
@@ -28,22 +28,22 @@ const Footer = () => {
               <h5 className="footer-column-head">Explore</h5>
               <ul className="explore">
                 <li className="footer-link">
-                  <a href="#">Home</a>
+                  <NavLink to="/">Home</NavLink>
                 </li>
                 <li className="footer-link">
-                  <a href="#">{"Rooms & Suites"}</a>
+                  <NavLink to="/Rooms">rooms {"&"} suites</NavLink>
                 </li>
                 <li className="footer-link">
-                  <a href="#">Resturant</a>
+                  <NavLink to="/Spa">Spa {"&"} wellness</NavLink>
                 </li>
                 <li className="footer-link">
-                  <a href="#">{"Spa & Wellness"}</a>
+                  <NavLink to="/Resturant">restaurant</NavLink>
                 </li>
                 <li className="footer-link">
-                  <a href="#">About Hotel</a>
+                  <NavLink to="/About">about</NavLink>
                 </li>
                 <li className="footer-link">
-                  <a href="#">Contact</a>
+                  <NavLink to="/Contact">contact</NavLink>
                 </li>
               </ul>
             </div>

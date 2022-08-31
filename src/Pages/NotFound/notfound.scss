@@ -1,0 +1,28 @@
+@use "../../SASS/Variables" as *;
+@use "../../SASS/Mixins" as *;
+
+.error-page {
+  height: 100vh;
+  @include flex(row, center, center);
+  text-align: center;
+  color: $sec-color;
+  .error {
+    font-size: 80px;
+  }
+  .code {
+    font-size: 70px;
+    margin: 15px 0;
+  }
+  .home {
+    font-weight: bold;
+    text-transform: capitalize;
+    @include media(mobile) {
+      width: 90%;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    a {
+      color: $main-color;
+    }
+  }
+}

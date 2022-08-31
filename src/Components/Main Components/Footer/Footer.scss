@@ -45,11 +45,13 @@ footer {
         .footer-link {
           position: relative;
           margin-bottom: 9px;
+          text-transform: capitalize;
+          font-family: $hotel-name-family;
           a {
             position: relative;
             z-index: 1;
             color: $sec-text-color;
-            font-size: 14px;
+            font-size: 17px;
             letter-spacing: 1px;
             transition: $transition + 0.2;
             left: 0;

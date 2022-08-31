@@ -1,18 +1,22 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Popup.scss";
 
-import { VideoContext, GalleryContext } from "../../../App/App";
+import { VideoContext } from "../../../App/App";
 
 import { AiOutlineClose } from "../../icons";
 
 const Popup = ({ type, source }) => {
-  //   const [PlayGalley, SetPlayGalley] = useContext(VideoContext);
-  // const [ShowImage, setShowImage] = useContext(GalleryContext);
+  const [playVideo, setPlayVideo] = useContext(VideoContext);
+  const [closeState, setcloseState] = useState(false);
 
-  const test = useRef();
+  useEffect(() => {
+    if (closeState) {
+      setPlayVideo(false);
+    }
+  }, [closeState]);
+
   const closePopup = () => {
-    // SetPlayGalley(false);
-    // setPlayVideo(false);
+    setcloseState(true);
   };
 
   const mediaCond =
@@ -23,7 +27,7 @@ const Popup = ({ type, source }) => {
     );
 
   return (
-    <article ref={test} className={`popup`}>
+    <article onClick={closePopup} className={`popup ${playVideo && "display"}`}>
       <div className="main-holder">
         <AiOutlineClose className="closeIcon" onClick={closePopup} />
         <div className="type-holder">{mediaCond}</div>

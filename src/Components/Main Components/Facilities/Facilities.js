@@ -17,7 +17,7 @@ const Facilities = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
-        window.pageYOffset + 550 >
+        window.pageYOffset + 600 >
         facilitiSection.current.offsetTop +
           facilitiSection.current.clientHeight -
           window.innerHeight

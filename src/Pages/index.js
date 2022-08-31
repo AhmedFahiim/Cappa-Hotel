@@ -8,3 +8,4 @@ export { default as Gallery } from "./Gallery/Gallery";
 export { default as News } from "./News/News";
 export { default as SinglePost } from "./Single Post/SinglePost";
 export { default as Contact } from "./Contact";
+export { default as NotFound } from "./NotFound/NotFound";

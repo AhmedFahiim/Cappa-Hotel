@@ -9,7 +9,7 @@ const Luxury = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
-        window.pageYOffset + 400 >
+        window.pageYOffset + 450 >
         luxurySection.current.offsetTop +
           luxurySection.current.clientHeight -
           window.innerHeight

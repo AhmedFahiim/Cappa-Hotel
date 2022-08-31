@@ -3,6 +3,7 @@
 @use "../../../SASS/Mixins" as *;
 
 .gallery-item {
+  margin-bottom: 25px;
   cursor: pointer;
   .over-lay-holder {
     position: relative;
@@ -51,13 +52,6 @@
       .over-lay {
         background-color: rgba(#000, 0.3);
       }
-    }
-  }
-  &.clickedItem {
-    .popup {
-      pointer-events: auto;
-      z-index: 1000;
-      opacity: 1;
     }
   }
 }
