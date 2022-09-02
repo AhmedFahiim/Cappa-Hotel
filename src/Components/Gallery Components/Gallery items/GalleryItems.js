@@ -1,18 +1,15 @@
 import React, { useContext } from "react";
 import "./GalleryItems.scss";
+import { BsPlay } from "../../icons";
 
 import { OverLay, Popup } from "../../Sub Components";
-import { ActivePopupContext, VideoContext } from "../../../App/App";
-
-import { BsPlay } from "../../icons";
+import { ActivePopupContext } from "../../../App/App";
 
 const GalleryItems = ({ data }) => {
   const [ActivePopup, setActivePopup] = useContext(ActivePopupContext);
-  const [, setPlayVideo] = useContext(VideoContext);
 
   const idHandler = (itemId) => {
     setActivePopup(itemId);
-    setPlayVideo(true);
   };
 
   return data.map(({ id, type, col, src, popSource }) => {
@@ -31,7 +28,7 @@ const GalleryItems = ({ data }) => {
           )}
           <OverLay />
         </div>
-        {id == ActivePopup && <Popup type={type} source={popSource} />}
+        {id === ActivePopup ? <Popup type={type} source={popSource} /> : ""}
       </section>
     );
   });
