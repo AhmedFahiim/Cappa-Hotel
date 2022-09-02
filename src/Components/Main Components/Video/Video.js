@@ -3,7 +3,7 @@ import { Stars, Popup, OverLay } from "../../Sub Components";
 import { BsPlay } from "../../icons";
 import "./Video.scss";
 
-import { VideoContext } from "../../../App/App";
+import { ActivePopupContext } from "../../../App/App";
 
 const styling = {
   position: "relative",
@@ -14,10 +14,9 @@ const styling = {
 };
 
 const Video = () => {
-  const [, setPlayVideo] = useContext(VideoContext);
-
+  const [ActivePopup, setActivePopup] = useContext(ActivePopupContext);
   const clickHandler = () => {
-    setPlayVideo(true);
+    setActivePopup(3);
   };
 
   return (
@@ -31,7 +30,12 @@ const Video = () => {
         </div>
       </article>
       <OverLay />
-      <Popup type="Video" source="https://www.youtube.com/embed/xh4GnTKFQso" />
+      {ActivePopup === 3 && (
+        <Popup
+          type="Video"
+          source="https://www.youtube.com/embed/xh4GnTKFQso"
+        />
+      )}
     </section>
   );
 };

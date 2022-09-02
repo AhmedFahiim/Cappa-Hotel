@@ -65,7 +65,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="made-by">
-        <span className="copy-right">&copy; Copyright {year} by</span> {""}
+        <span className="copy-right">
+          Copyright &copy; {year} | Developed by
+        </span>{" "}
+        {""}
         <span className="myName">FAHII.M</span>
       </div>
     </footer>

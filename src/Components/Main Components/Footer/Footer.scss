@@ -122,8 +122,12 @@ footer {
       color: $sec-text-color;
     }
     .myName {
+      position: relative;
+      top: 2px;
       font-family: $hotel-name-family;
       color: #fff;
+      font-size: 17px;
+      letter-spacing: 1px;
     }
   }
 }
