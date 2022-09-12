@@ -5,9 +5,7 @@
   .posts-holder {
     padding: 120px 0;
   }
-  .posts {
-    @include media(large) {
-      margin-right: 30px;
-    }
+  .row {
+    justify-content: space-around;
   }
 }
