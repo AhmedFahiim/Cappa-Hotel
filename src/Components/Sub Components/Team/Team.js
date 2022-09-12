@@ -21,9 +21,10 @@ const Team = () => {
           modules={[Pagination]}
           pagination={{ clickable: true }}
           loop={true}
+          grabCursor={true}
           speed={900}
           spaceBetween={30}
-          grabCursor={true}
+          slidesPerGroup={3}
           breakpoints={{
             768: { slidesPerView: 2, spaceBetween: 20 },
             992: { slidesPerView: 3, spaceBetween: 30 },

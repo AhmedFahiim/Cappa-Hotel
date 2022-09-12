@@ -14,7 +14,10 @@ const FullLanding = ({ img1, img2, img3 }) => {
   const landingHeight = useRef();
 
   const animation = () => {
-    window.scrollBy(0, landingHeight.current.clientHeight);
+    window.scrollBy({
+      top: landingHeight.current.clientHeight,
+      behavior: "smooth",
+    });
   };
   return (
     <section ref={landingHeight} className="full-landing">

@@ -13,6 +13,7 @@ import {
   Spa,
   NotFound,
 } from "../Pages";
+import { ScrollUp } from "../Components/Sub Components";
 import "./App.scss";
 
 export const ActivePopupContext = React.createContext();
@@ -36,6 +37,7 @@ function App() {
           <Route path="Spa" element={<Spa />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ScrollUp />
       </div>
     </ActivePopupContext.Provider>
   );

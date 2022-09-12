@@ -1,0 +1,29 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.scroll-up {
+  @include flex(row, center, center);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid $main-color;
+  cursor: pointer;
+  transition: $transition;
+  opacity: 0;
+  z-index: -1;
+  &.active {
+    opacity: 1;
+    z-index: 10000;
+  }
+  .arrow-up {
+    color: $main-color;
+    font-size: 22px;
+    transition: $transition;
+  }
+  &:hover {
+    animation: bounce 2s infinite;
+  }
+}

@@ -12,6 +12,7 @@ import {
   BsWifi,
   BsArrowLeftShort,
   BsArrowRightShort,
+  BsArrowUp,
   BsChatText,
 } from "react-icons/bs";
 import { FaFacebookF, FaPinterestP, FaSwimmingPool } from "react-icons/fa";
@@ -73,4 +74,5 @@ export {
   RiArrowGoBackLine,
   GoLocation,
   AiOutlineMail,
+  BsArrowUp,
 };

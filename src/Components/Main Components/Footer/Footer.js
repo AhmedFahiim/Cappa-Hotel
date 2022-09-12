@@ -7,6 +7,10 @@ import "./Footer.scss";
 let year = new Date().getFullYear();
 
 const Footer = () => {
+  const scrollTop = () => {
+    window.scrollTo(0);
+  };
+
   return (
     <footer>
       <div className="container">
@@ -28,22 +32,34 @@ const Footer = () => {
               <h5 className="footer-column-head">Explore</h5>
               <ul className="explore">
                 <li className="footer-link">
-                  <NavLink to="/">Home</NavLink>
+                  <NavLink onClick={scrollTop} to="/">
+                    Home
+                  </NavLink>
                 </li>
                 <li className="footer-link">
-                  <NavLink to="/Rooms">rooms {"&"} suites</NavLink>
+                  <NavLink onClick={scrollTop} to="/Rooms">
+                    rooms {"&"} suites
+                  </NavLink>
                 </li>
                 <li className="footer-link">
-                  <NavLink to="/Spa">Spa {"&"} wellness</NavLink>
+                  <NavLink onClick={scrollTop} to="/Spa">
+                    Spa {"&"} wellness
+                  </NavLink>
                 </li>
                 <li className="footer-link">
-                  <NavLink to="/Resturant">restaurant</NavLink>
+                  <NavLink onClick={scrollTop} to="/Resturant">
+                    restaurant
+                  </NavLink>
                 </li>
                 <li className="footer-link">
-                  <NavLink to="/About">about</NavLink>
+                  <NavLink onClick={scrollTop} to="/About">
+                    about
+                  </NavLink>
                 </li>
                 <li className="footer-link">
-                  <NavLink to="/Contact">contact</NavLink>
+                  <NavLink onClick={scrollTop} to="/Contact">
+                    contact
+                  </NavLink>
                 </li>
               </ul>
             </div>
