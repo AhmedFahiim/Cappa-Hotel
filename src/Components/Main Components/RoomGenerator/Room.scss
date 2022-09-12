@@ -134,6 +134,7 @@
   .room {
     .main-holder {
       .room-details {
+        top: 95%;
         .name {
           font-size: 25px;
         }
@@ -141,6 +142,7 @@
           margin-bottom: 20px;
         }
         .hidden {
+          flex-direction: column;
           .icons {
             i {
               margin-right: 3px;

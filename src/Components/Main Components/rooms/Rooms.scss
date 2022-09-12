@@ -18,8 +18,7 @@
       margin: 5px 0 25px;
     }
   }
-  .rooms-holder {
-    @include flex(column, flex-start, flex-start);
-    gap: 20px;
+  .row {
+    gap: 0;
   }
 }

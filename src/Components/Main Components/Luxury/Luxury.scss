@@ -60,6 +60,13 @@
     }
   }
 }
+@include media(small) {
+  .luxury {
+    .imgs-box {
+      justify-content: center;
+    }
+  }
+}
 
 @include media(MedToInf) {
   .luxury {
