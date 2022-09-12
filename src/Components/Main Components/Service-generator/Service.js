@@ -23,8 +23,12 @@ export const ServiceDetails = ({
   time,
   href,
 }) => {
+  const scrollTop = () => {
+    window.scrollTo({ top: "0" });
+  };
+
   const buttonCond = button ? (
-    <Button link={true} content="Read More" href={href} />
+    <Button Fun={scrollTop} link={true} content="Read More" href={href} />
   ) : (
     <div className="working-times">
       <AiOutlineClockCircle className="clock" />
