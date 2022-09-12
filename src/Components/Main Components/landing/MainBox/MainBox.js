@@ -9,7 +9,7 @@ const MainBox = ({ img, small, main }) => {
         <Stars />
         <h1 className="small-head">{small}</h1>
         <h1 className="main-word">{main}</h1>
-        <Button content={"Rooms & Suites"} link={true} href="#" />
+        <Button content={"Rooms & Suites"} link={true} href="Rooms" />
       </div>
       <OverLay />
     </article>

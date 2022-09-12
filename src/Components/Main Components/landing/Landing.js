@@ -54,7 +54,7 @@ function Landing() {
         <SwiperSlide>
           <MainBox
             small="The Ultimate Luxury Experience"
-            main={["Enjoy The Best", <br />, " Moments of Life"]}
+            main={["Enjoy The Best", <br />, "Moments of Life"]}
             img="images/slider/3.jpg"
           />
         </SwiperSlide>
