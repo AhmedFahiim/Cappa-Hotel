@@ -85,7 +85,9 @@ const Footer = () => {
           Copyright &copy; {year} | Developed by
         </span>{" "}
         {""}
-        <span className="myName">FAHII.M</span>
+        <a href="https://portfolio-ahmedfahiim.vercel.app/" className="myName">
+          FAHII.M
+        </a>
       </div>
     </footer>
   );
