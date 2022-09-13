@@ -5,6 +5,10 @@ import { NavLink } from "react-router-dom";
 import "./Fliped-Room.scss";
 
 const FlipedRoom = ({ data }) => {
+  const scrollUp = () => {
+    window.scrollTo({ top: "0" });
+  };
+
   return data.map((room) => {
     return (
       <article key={room.name} className="room-fliped-card col-md-6 col-lg-4">
@@ -41,7 +45,11 @@ const FlipedRoom = ({ data }) => {
               </div>
             </article>
             <div className="nav-holder">
-              <NavLink className="details-nav" to="/RoomsDetails">
+              <NavLink
+                onClick={scrollUp}
+                className="details-nav"
+                to="/RoomsDetails"
+              >
                 Details
               </NavLink>
             </div>

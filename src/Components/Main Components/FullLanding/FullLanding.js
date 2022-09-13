@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Header } from "../../Main Components";
 import { OverLay } from "../../Sub Components";
 import { AiOutlineArrowDown } from "../../icons";
@@ -12,6 +12,7 @@ import "swiper/scss/pagination";
 
 const FullLanding = ({ img1, img2, img3 }) => {
   const landingHeight = useRef();
+  const swiperRef = useRef();
 
   const animation = () => {
     window.scrollBy({
@@ -19,10 +20,18 @@ const FullLanding = ({ img1, img2, img3 }) => {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    setInterval(() => {
+      swiperRef.current.swiper.slideNext();
+    }, 2500);
+  }, []);
+
   return (
     <section ref={landingHeight} className="full-landing">
       <Header />
       <Swiper
+        ref={swiperRef}
         className="landing-swiper"
         modules={[Pagination]}
         pagination={{ clickable: true }}
