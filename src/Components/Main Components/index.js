@@ -15,4 +15,5 @@ export { default as Testi } from "./testi/Testi";
 export { default as Services } from "./Services/Services";
 export { default as News } from "./News/News";
 export { default as Booking } from "./Booking/Booking";
+export { default as FAQ } from "./FAQ/FAQ";
 export { default as Footer } from "./Footer/Footer";

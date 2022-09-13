@@ -1,0 +1,79 @@
+@use "../../../SASS/Variables" as *;
+@use "../../../SASS/Mixins" as *;
+
+.faq {
+  background-color: $pale-red;
+  padding: 120px 0;
+  .wraper {
+    width: 75%;
+    margin: auto;
+    .special-small-head {
+      color: $text-color;
+    }
+    .special-main-head {
+      color: $sec-color;
+      font-size: 45px;
+    }
+    .questions-holder {
+      margin-top: 30px;
+      .question-holder {
+        background-color: #fff;
+        margin-bottom: 25px;
+        overflow: hidden;
+        .question-head {
+          @include flex(row, space-between, center);
+          padding: 18px 30px;
+          cursor: pointer;
+          .question {
+            color: $sec-color;
+            font-size: 20px;
+            font-weight: 400;
+            transition: $transition;
+          }
+          .question-icon {
+            font-size: 30px;
+            color: $main-color;
+          }
+        }
+        .answer {
+          color: $text-color;
+          font-size: 17px;
+          font-weight: 300;
+          font-family: $hotel-name-family;
+          padding: 0 30px;
+          line-height: 1.8;
+          max-height: 0;
+          transition: 0.2s;
+        }
+        &.show-answer {
+          .question-head {
+            .question {
+              color: $main-color;
+            }
+          }
+          .answer {
+            padding-bottom: 18px;
+            max-height: 110px;
+            transition: $transition + 0.2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// start media queries
+@include media(MobileToLarge) {
+  .faq {
+    .wraper {
+      width: 100%;
+      .questions-holder {
+        .question-holder.show-answer {
+          .answer {
+            max-height: 280px;
+          }
+        }
+      }
+    }
+  }
+}

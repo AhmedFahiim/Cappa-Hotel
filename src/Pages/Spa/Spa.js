@@ -5,6 +5,7 @@ import {
   FullLanding,
   PlaceInfo,
   Testi,
+  FAQ,
   Footer,
 } from "../../Components/Main Components";
 import { CallUs } from "../../Components/Sub Components";
@@ -60,6 +61,7 @@ const Spa = () => {
           </div>
         </section>
       </div>
+      <FAQ />
       <Testi img="images/spa/2.jpg" />
       <Footer />
     </main>
